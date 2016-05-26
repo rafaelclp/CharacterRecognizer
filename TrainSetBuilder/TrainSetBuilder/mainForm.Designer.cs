@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.charsetList = new System.Windows.Forms.ListView();
             this.charsetColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pathColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -342,6 +343,7 @@
             this.Controls.Add(this.charsetRemoveButton);
             this.Controls.Add(this.charsetAddButton);
             this.Controls.Add(this.charsetList);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "mainForm";
             this.Text = "Construtor de conjunto de treinamento";
