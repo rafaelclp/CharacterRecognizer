@@ -30,7 +30,7 @@ import javax.swing.JOptionPane;
 public class TelaInicial extends javax.swing.JFrame {
 
     RecognizerChar myRecognizer = new RecognizerChar();
-    private static final boolean DEBUG_MODE = true;
+    private static final boolean DEBUG_MODE = false;
 
     /**
      * Creates new form TelaInicial
