@@ -41,7 +41,7 @@ public class PDI {
         int r = (rgb >> 16) & 0xff;
         int g = (rgb >> 8) & 0xff;
         int b = rgb & 0xff;
-        return (r + g + b) / 3 >= 128;
+        return (r + g + b) / 3 <= 128;
     }
 
     public static BufferedImage cortarBloco(BufferedImage imagemOriginal, int x, int y, int larguraBloco, int alturaBloco) {

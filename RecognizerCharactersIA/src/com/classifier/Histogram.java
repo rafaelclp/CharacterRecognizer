@@ -33,14 +33,22 @@ public class Histogram {
         input = PDI.ajustarParaOCR(input);
 
         double[] histogram = new double[HIST_SIZE];
+        int total_b_pixels = 0;
         for (int col = 0; col < height; col++) {
             for (int row = 0; row < width; row++) {
                 if (PDI.ehPreto(input.getRGB(row, col))) {
                     histogram[col]++;
+                    total_b_pixels++;
                 }
             }
         }
 
+        if (total_b_pixels > 0) {
+            for (int i = 0; i < HIST_SIZE; i++) {
+                histogram[i] /= total_b_pixels;
+            }
+        }
+    
         return histogram;
     }
     
